@@ -1,31 +1,47 @@
 {
-    "howDo": "all or tor or proxy",
-    "proxyType": "SOCKS or HTTP",
-
-    "songsToRecommend": [
-        {
-            "songType":1,
-            "songTitle": "사랑인가봐(사내맞선OST)",
-            "singer": "멜로망스",
-			"songId":"Optional"
-        },
-
-        {
-            "songType":2,
-            "songTitle": "Let It Go(Frozen(겨울왕국) OST)",
-            "singer": "Idina Menzel"
-        },
-
-        {
-            "songType":3,
-            "songTitle": "Lemon(ドラマ'アンナチュラル' OST)",
-            "singer": "米津玄師"
-        },
-
-        {
-            "songType":4,
-            "songTitle": "朋友",
-            "singer": "周华健"
-        }
-    ]
+  "run": {
+    "mode": "all",
+    "proxy": {
+      "type": "SOCKS",
+      "limit": 25
+    },
+    "rounds": 2,
+    "delayMs": { "min": 500, "max": 1500 },
+    "timeoutSec": 7,
+    "retries": 1,
+    "retryDelayMs": 400,
+    "allowProposeIfNotFound": true,
+    "tor": {
+      "manageService": true,
+      "serviceName": "tor"
+    }
+  },
+  "songs": [
+    {
+      "title": "IRIS OUT",
+      "singer": "米津玄師"
+    },
+    {
+      "title": "사랑인가봐(사내맞선OST)",
+      "singer": "멜로망스",
+      "genre": "일반가요"
+    },
+    {
+      "title": "Let It Go(Frozen(겨울왕국) OST)",
+      "singer": "Idina Menzel",
+      "dt_code": 20
+    },
+    {
+      "title": "Lemon(ドラマ'アンナチュラル' OST)",
+      "singer": "米津玄師",
+      "genre": "JPOP"
+    },
+    {
+      "title": "朋友",
+      "singer": "周华健",
+      "dt_code": 40,
+      "po_name": "익명",
+      "po_content": "반주곡 신청"
+    }
+  ]
 }
